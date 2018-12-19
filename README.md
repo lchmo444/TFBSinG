@@ -20,6 +20,7 @@ Move folder to lee_test2 location
 ```python manage.py startapp home_site```
 
 Change the settings.py in the folder of lee_test2 as below.
+
 ```ALLOWED_HOSTS = ['*']```
 
 ```INSTALLED_APPS = [
