@@ -38,6 +38,13 @@ STATICFILES_DIRS = [
 ]
 ```
 Change the urls.py in the folder of lee_test2 as below.
+```
+url patterns = [
+path('home_site/',include('home_site.urls)),
+path('admin/', admin.site.urls),
+]
+```
+
 
 
 Copyright 2018 Chungkeun Lee, All Rights Reserved.
