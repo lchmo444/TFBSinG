@@ -21,8 +21,8 @@ Move folder to lee_test2 location
 
 Change the settings.py in the folder of lee_test2 as below.
 
-```ALLOWED_HOSTS = ['*']
-
+```ALLOWED_HOSTS = ['*']```
+```
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
