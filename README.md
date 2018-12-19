@@ -35,8 +35,9 @@ INSTALLED_APPS = [
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
 	os.path.join(BASE_DIR, "static"),
-]```
-
+]
+```
+Change the urls.py in the folder of lee_test2 as below.
 
 
 Copyright 2018 Chungkeun Lee, All Rights Reserved.
