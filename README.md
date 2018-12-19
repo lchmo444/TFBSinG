@@ -21,18 +21,18 @@ Move folder to lee_test2 location
 
 Change the settings.py in the folder of lee_test2 as below.
 
-```ALLOWED_HOSTS = ['*']```
+```ALLOWED_HOSTS = ['*']
 
-```INSTALLED_APPS = [
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-'home_site.apps.HomeSiteConfig',]```
+'home_site.apps.HomeSiteConfig',]
 
-```STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
 	os.path.join(BASE_DIR, "static"),
 ]```
