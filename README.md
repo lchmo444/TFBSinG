@@ -2,13 +2,11 @@
 Prediction of the binding sites of multiple transcription factors in a whole genome
 
 
-* train_model_hg19.model : http://165.246.44.27:8080/share.cgi?ssid=0E5Pj1q
-* train_model_mm10.model : http://165.246.44.27:8080/share.cgi?ssid=0nbSCBQ
-
-
 ## Requirements
 * For python3 (python 3.6.4)
 * Django
+* train_model_hg19.model : http://165.246.44.27:8080/share.cgi?ssid=0E5Pj1q
+* train_model_mm10.model : http://165.246.44.27:8080/share.cgi?ssid=0nbSCBQ
 
 ## Site Instructions
 How to set up TFBSinG's Python (django)
