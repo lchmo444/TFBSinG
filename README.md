@@ -6,9 +6,9 @@ Prediction of the binding sites of multiple transcription factors in a whole gen
 * train_model_mm10.model : http://165.246.44.27:8080/share.cgi?ssid=0nbSCBQ
 
 
-## Requrements
-
-
+## Requirements
+* For python3 (python 3.6.4)
+* Django
 
 ## Site Instructions
 How to set up TFBSinG's Python (django)
