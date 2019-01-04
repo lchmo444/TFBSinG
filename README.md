@@ -21,8 +21,8 @@ How to set up TFBSinG's Python (django)
 ```python manage.py startapp home_site```
 
 3. Move the file to root (lee_test2)
-- train_model_hg19.model
-- train_model_mm10.model
++ train_model_hg19.model
++ train_model_mm10.model
 
 4. Change the settings.py in the folder of lee_test2 as below.
 
