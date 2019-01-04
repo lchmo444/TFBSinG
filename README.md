@@ -13,12 +13,15 @@ Prediction of the binding sites of multiple transcription factors in a whole gen
 How to set up TFBSinG's Python (django)
 
 You can configure the settings on your local PC using the following method.
-
+ 
 ```django-admin startproject lee_test2```
 
 Move folder to lee_test2 location
 
 ```python manage.py startapp home_site```
+
+Move the file to root (lee_test2)
+train_model_hg19.model, train_model_mm10.model
 
 Change the settings.py in the folder of lee_test2 as below.
 
