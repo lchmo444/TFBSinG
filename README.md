@@ -51,5 +51,9 @@ Run the Django project
 python manage.py runserver
 ```
 
+Enter the following address on the web
+```
+http://127.0.0.1:8000/home_site/
+```
 
 Copyright 2018 Chungkeun Lee, All Rights Reserved.
