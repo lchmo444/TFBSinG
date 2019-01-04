@@ -46,6 +46,10 @@ path('admin/', admin.site.urls),
 ]
 ```
 
+Run the Django project
+```
+python manage.py runserver
+```
 
 
 Copyright 2018 Chungkeun Lee, All Rights Reserved.
