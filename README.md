@@ -44,9 +44,13 @@ STATICFILES_DIRS = [
 ```
 Change the urls.py in the folder of lee_test as below.
 ```
-url patterns = [
-path('home_site/',include('home_site.urls')),
-path('admin/', admin.site.urls),
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('home_site/', include('home_site.urls')),
+    # new url definition
+    path('admin/', admin.site.urls),
 ]
 ```
 
