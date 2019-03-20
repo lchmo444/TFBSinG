@@ -14,17 +14,17 @@ How to set up TFBSinG's Python (django)
 
 1. You can configure the settings on your local PC using the following method.
  
-```django-admin startproject lee_test2```
+```django-admin startproject lee_test```
 
-2. Move folder to lee_test2 location
+2. Move folder to lee_test location
 
 ```python manage.py startapp home_site```
 
-3. Move the file to root (lee_test2)
+3. Move the file to root (lee_test)
 * train_model_hg19.model
 * train_model_mm10.model
 
-4. Change the settings.py in the folder of lee_test2 as below.
+4. Change the settings.py in the folder of lee_test as below.
 
 ```ALLOWED_HOSTS = ['*']```
 ```
@@ -42,7 +42,7 @@ STATICFILES_DIRS = [
 	os.path.join(BASE_DIR, "static"),
 ]
 ```
-Change the urls.py in the folder of lee_test2 as below.
+Change the urls.py in the folder of lee_test as below.
 ```
 url patterns = [
 path('home_site/',include('home_site.urls')),
