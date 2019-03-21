@@ -4,6 +4,7 @@ Prediction of the binding sites of multiple transcription factors in a whole gen
 
 ## Requirements
 * Windows
+* msvcp120d.dll, msvcr120d.dll, vcomp120d.dll
 * For python3 (python 3.6.4)
 * Django
 * train_model_hg19.model : http://165.246.44.27:8080/share.cgi?ssid=0E5Pj1q
