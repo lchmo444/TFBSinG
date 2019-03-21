@@ -66,7 +66,7 @@ http://127.0.0.1:8000/home_site/
 ```
 
 ## Bug report
-- DLL(MSVCP120D,MSVCR120D,VCOMP120D).zip is decomposed.
+- 3 DLL(MSVCP120D,MSVCR120D,VCOMP120D).zip is decomposed.
 - dll files move to C:\Windows\System32.
 ```
 MSVCP120D.dll
