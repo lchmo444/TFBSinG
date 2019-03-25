@@ -11,7 +11,7 @@ Prediction of the binding sites of multiple transcription factors in a whole gen
 * train_model_mm10.model : http://165.246.44.27:8080/share.cgi?ssid=0nbSCBQ
 
 ##  Setup pregress (video)
-https://165.246.44.27:443/share.cgi?ssid=0TIFmFj
+http://165.246.44.27:8080/share.cgi?ssid=082bw63
 
 ## Site Instructions
 How to set up TFBSinG's Python (django)
