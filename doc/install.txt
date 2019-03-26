@@ -1,0 +1,110 @@
+#########################################
+
+Step 1.1 Download and setup regarding python 3.6.4
+
+#########################################
+
+Download and install is executed towards python 3.6.4
+
+Install form
+
+Customize installation (C:\Python36\)
+Option add regarding python 3.6.4 to path
+
+
+#########################################
+
+Step 1.2 Python 3.6.4 setup through Command Prompt (CMD)
+
+#########################################
+
+c:\>mkdir TFBSinG
+c:\>cd TFBSinG
+c:\TFBSinG>python -m pip
+c:\TFBSinG>python -m install Django
+
+
+#########################################
+
+Step 2.1 TFBSinG is Downloaded and installed through Github
+
+#########################################
+
+TFBSinG files are dowunload regarding https://github.com/lchmo444/TFBSinG
+TFBSinG files are extracted at the folder, then they are arranged below.
+c:\TFBSinG\TFBSinG-master>
+
+c:\TFBSinG>django-admin startproject lee_test (make lee_test folder)
+c:\TFBSinG>cd lee_test
+c:\TFBSinG\lee_test>python manage.py startapp home_site
+
+
+#########################################
+
+Step 2.1 Github files are overlapping at TFBSinG and 2 models are download with github
+
+#########################################
+
+Files(root folder) in TFBSinG(Github files) move to local pc(c:\TFBSinG\lee_test)
+home_site folder in TFBSinG(Github files) move to local pc(c:\TFBSinG\home_site)
+
+http://165.246.44.27:8080/share.cgi?ssid=0E5Pj1q move to local pc(c:\TFBSinG\lee_test)
+http://165.246.44.27:8080/share.cgi?ssid=0nbSCBQ move to local pc(c:\TFBSinG\lee_test)
+
+#########################################
+
+Step 2.2 settings.py and urls.py are modified by editor
+
+#########################################
+
+Change the settings.py in the folder of lee_test as below.
+
+ALLOWED_HOSTS = ['*']
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+'home_site.apps.HomeSiteConfig',]
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+	os.path.join(BASE_DIR, "static"),
+]
+
+-----------------------------------------
+
+Change the urls.py in the folder of lee_test as below.
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('home_site/', include('home_site.urls')),
+    # new url definition
+    path('admin/', admin.site.urls),
+]
+
+#########################################
+
+Step 2.3 Bug report
+
+#########################################
+
+DLL(MSVCP120D,MSVCR120D,VCOMP120D).zip is decomposed (MSVCP120D.dll, MSVCR120D.dll, VCOMP120D.dll).
+3 dll files move to C:\Windows\System32.
+
+#########################################
+
+Step 2.3 web-program start
+
+#########################################
+
+c:\TFBSinG>python manage.py runserver
+-------------------------------------------------
+
+This is represented through web
+http://127.0.0.1:8000/home_site/
