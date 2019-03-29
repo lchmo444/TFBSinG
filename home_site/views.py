@@ -425,7 +425,7 @@ def form_function(request):
 		
 		svmc_exe = "svm-scale.exe -l 0 -u 1 -r train_model_hg19.range test_sequence_hg19.txt "+"> test_sequence_hg19.t.scale"
 		popen(svmc_exe)
-		time.sleep(5)
+		time.sleep(25)
 
 
 
@@ -907,7 +907,7 @@ def form_function_2(request):
 		
 		svmc_exe = "svm-scale.exe -l 0 -u 1 -r train_model_hg19.range test_sequence_hg19.txt "+"> test_sequence_hg19.t.scale"
 		popen(svmc_exe)
-		time.sleep(5)
+		time.sleep(25)
 
 
 
@@ -1392,7 +1392,7 @@ def form_function_3(request):
 		
 		svmc_exe = "svm-scale.exe -l 0 -u 1 -r train_model_mm10.range test_sequence_mm10.txt "+"> test_sequence_mm10.t.scale"
 		popen(svmc_exe)
-		time.sleep(5)
+		time.sleep(25)
 
 
 		svmp_exe_1 = "svm-predict_cutoffmod.exe " 
@@ -1873,7 +1873,7 @@ def form_function_4(request):
 		
 		svmc_exe = "svm-scale.exe -l 0 -u 1 -r train_model_mm10.range test_sequence_mm10.txt "+"> test_sequence_mm10.t.scale"
 		popen(svmc_exe)
-		time.sleep(5)
+		time.sleep(25)
 
 
 		svmp_exe_1 = "svm-predict_cutoffmod.exe " 
