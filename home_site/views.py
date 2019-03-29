@@ -428,6 +428,7 @@ def form_function(request):
 		time.sleep(5)
 
 
+
 		svmp_exe_1 = "svm-predict_cutoffmod.exe " 
 		svmp_exe_2 = "test_sequence_hg19.t.scale "
 		#svmp_exe_2 = "test_sequence_hg19.txt "
@@ -909,6 +910,8 @@ def form_function_2(request):
 		time.sleep(5)
 
 
+
+
 		svmp_exe_1 = "svm-predict_cutoffmod.exe " 
 		svmp_exe_2 = "test_sequence_hg19.t.scale "
 		#svmp_exe_2 = "test_sequence_hg19.txt "
@@ -917,7 +920,6 @@ def form_function_2(request):
 		svmp_exe = svmp_exe_1+svmp_exe_2+svmp_exe_3+svmp_exe_4
 		p1 = popen(svmp_exe)		
 		#p1 = subprocess.check_output(["ipconfig","/all"], universal_newlines=True)
-
 
 
 
@@ -949,7 +951,10 @@ def form_function_2(request):
 			while True:
 				time.sleep(2)
 				i = os.path.getsize('sequence_hg19.result')
-				time.sleep(10)
+
+				print(p1.read())
+
+				time.sleep(16)
 				j = os.path.getsize('sequence_hg19.result')
 				if i==j and i != 0 and j != 0:
 					break							
@@ -958,6 +963,9 @@ def form_function_2(request):
 			file_read = open('sequence_hg19.result','r').read()
 
 
+			# lee_20190329delete file:
+			os.remove("sequence_hg19.result")
+
 
 			return HttpResponse(file_read)
 
@@ -965,7 +973,12 @@ def form_function_2(request):
 
 	else:
 		f = NameForm_2()
+
+
+
 		return render(request, "home_site/human_long.html", {'form': f})
+
+
 #	try:
 #		f = NameForm()
 #		return render(request, "home_site/index.html", {'form': f})
