@@ -1,7 +1,7 @@
 # TFBSinG
 Prediction of the binding sites of multiple transcription factors in a whole genome
 
-
+25bp - 30000bp
 ## Requirements
 * Windows
 * msvcp120d.dll, msvcr120d.dll, vcomp120d.dll
