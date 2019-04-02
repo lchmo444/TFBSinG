@@ -11,7 +11,8 @@ from os import popen
 import time
 import os
 import math
-
+import re
+import platform
 
 # Create your views here.
 
@@ -425,7 +426,7 @@ def form_function(request):
 		
 		svmc_exe = "svm-scale.exe -l 0 -u 1 -r train_model_hg19.range test_sequence_hg19.txt "+"> test_sequence_hg19.t.scale"
 		popen(svmc_exe)
-		time.sleep(25)
+		time.sleep(5)
 
 
 
@@ -493,6 +494,35 @@ def form_function(request):
 #	except:
 #		return HttpResponseNotFound(u'<h1>not access</h1>')
 		
+
+#####lee_20190329_process states
+def get_process_list():
+    my_os = platform.system()
+
+    if (my_os == 'Linux'):
+        all_ps = os.popen('ps -a').read()
+        process_list = re.findall(":\d\d\s([\w_\-\.]+)", all_ps)
+
+        return process_list
+
+    elif (my_os == 'Windows'):
+        #process_list = ['System Idle Process', 'System', 'Registry', 'Memory Compression']
+        process_list = []
+
+        regex = re.compile(".*[.]exe\s", re.I)
+        all_ps = os.popen('tasklist /fi "imagename eq svm-predict_cutoffmod.exe').read()
+
+        for process in regex.findall(all_ps):
+            process_list.append(process)
+
+        return process_list
+
+    return False
+
+
+
+
+
 
 
 def form_function_2(request):
@@ -907,7 +937,7 @@ def form_function_2(request):
 		
 		svmc_exe = "svm-scale.exe -l 0 -u 1 -r train_model_hg19.range test_sequence_hg19.txt "+"> test_sequence_hg19.t.scale"
 		popen(svmc_exe)
-		time.sleep(25)
+		time.sleep(5)
 
 
 
@@ -952,13 +982,26 @@ def form_function_2(request):
 				time.sleep(2)
 				i = os.path.getsize('sequence_hg19.result')
 
-				print(p1.read())
+				#process lee_20190329_load svm process
+				#global rrrr
+				process_list = get_process_list()
+				for rrrr in process_list:
+					print(rrrr)
+
+				#lee_20190329_original
+				#time.sleep(16)
+				#j = os.path.getsize('sequence_hg19.result')
+				#if i==j and i != 0 and j != 0:
+				#	break
 
 				time.sleep(16)
-				j = os.path.getsize('sequence_hg19.result')
-				if i==j and i != 0 and j != 0:
-					break							
-			
+				#j = os.path.getsize('sequence_hg19.result')
+				if rrrr != "svm-predict_cutoffmod.exe ":
+					break
+
+				#print(rrrr)
+				rrrr = ""
+
 
 			file_read = open('sequence_hg19.result','r').read()
 
@@ -973,7 +1016,6 @@ def form_function_2(request):
 
 	else:
 		f = NameForm_2()
-
 
 
 		return render(request, "home_site/human_long.html", {'form': f})
@@ -1392,7 +1434,7 @@ def form_function_3(request):
 		
 		svmc_exe = "svm-scale.exe -l 0 -u 1 -r train_model_mm10.range test_sequence_mm10.txt "+"> test_sequence_mm10.t.scale"
 		popen(svmc_exe)
-		time.sleep(25)
+		time.sleep(5)
 
 
 		svmp_exe_1 = "svm-predict_cutoffmod.exe " 
@@ -1873,7 +1915,7 @@ def form_function_4(request):
 		
 		svmc_exe = "svm-scale.exe -l 0 -u 1 -r train_model_mm10.range test_sequence_mm10.txt "+"> test_sequence_mm10.t.scale"
 		popen(svmc_exe)
-		time.sleep(25)
+		time.sleep(5)
 
 
 		svmp_exe_1 = "svm-predict_cutoffmod.exe " 
@@ -1915,15 +1957,30 @@ def form_function_4(request):
 			j=1
 			while True:
 				time.sleep(2)
+
 				i = os.path.getsize('sequence_mm10.result')
-				time.sleep(3)
-				j = os.path.getsize('sequence_mm10.result')
-				if i==j and i != 0 and j != 0:
-					break							
-			
+
+				#lee_20190402_load svm process
+				process_list = get_process_list()
+				for rrrr in process_list:
+					print(rrrr)
+
+
+				#original
+				#time.sleep(3)
+				#j = os.path.getsize('sequence_mm10.result')
+				#if i==j and i != 0 and j != 0:
+				#	break
+				time.sleep(16)
+				if rrrr != "svm-predict_cutoffmod.exe ":
+					break
+				rrrr = ""
+
 
 			file_read = open('sequence_mm10.result','r').read()
 
+			# lee_20190329delete file:
+			os.remove("sequence_mm10.result")
 
 
 			return HttpResponse(file_read)
