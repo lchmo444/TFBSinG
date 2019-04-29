@@ -82,4 +82,4 @@ VCOMP120D.dll
 
 ## License
 
-[zlib License](Liense)
+[zlib License](License)
