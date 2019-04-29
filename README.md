@@ -80,6 +80,6 @@ VCOMP120D.dll
 ```
 
 
-## Bug report
+## License
 
-zlib License
+[zlib License](Liense)
