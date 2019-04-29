@@ -80,4 +80,6 @@ VCOMP120D.dll
 ```
 
 
-Copyright 2018 Chungkeun Lee, All Rights Reserved.
+## Bug report
+
+zlib License
